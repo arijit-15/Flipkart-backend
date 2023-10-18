@@ -13,7 +13,7 @@ const app = express();
 const stripeInstance = stripe(process.env.STRIPE_SECRET);
 
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
 
 // const USERNAME = process.env.DB_USERNAME;
 // const PASSWORD = process.env.DB_PASSWORD;

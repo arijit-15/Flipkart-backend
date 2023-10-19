@@ -15,12 +15,12 @@ const stripeInstance = stripe(process.env.STRIPE_SECRET);
 
 const PORT = process.env.PORT || 8080;
 
-// const USERNAME = process.env.DB_USERNAME;
-// const PASSWORD = process.env.DB_PASSWORD;
+const USERNAME = process.env.DB_USERNAME;
+const PASSWORD = process.env.DB_PASSWORD;
 
 //const stripe = require("stripe")("sk_test_51O26goSCYdCkPYHoT0BuSKm49dejIlwUV5McFiBbGqzsQwjICGuRVQdmNc4SkKre5lots68L7JhWNFj6zxe4D5xK00Fpi3a8o3")
 
-Connection();
+Connection(USERNAME,PASSWORD);
 
 app.listen(PORT, () => console.log(`server is working on ${PORT}`)); 
 DefaultData();
